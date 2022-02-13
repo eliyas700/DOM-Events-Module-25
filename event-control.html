@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p id="clicking-method"></p>
+<input id="input-field" type="text">
+<button id="name-update">Update</button>
+<button onclick="clickstyle()">Click ME</button>
+<h2 id="click-method"></h2>
+<button id="click">Click To See</button>
+<script>
+    function clickstyle (){
+        p= document.getElementById('clicking-method');
+        p.innerText= 'Set By the Function';
+    }
+    document.getElementById('click').addEventListener('click', function(){
+    document.getElementById('click-method').innerText= 'Hello World!'
+
+    })
+
+    //Name Update
+    document.getElementById('name-update').addEventListener('click', function(){
+        p= document.getElementById('clicking-method');
+        p.innerText= document.getElementById('input-field').value;
+        document.getElementById('input-field').value='';
+    })
+</script>
+</body>
+</html>

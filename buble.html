@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>lets Have fun with buble Vhai</h2>
+    <ul id="list-section">
+        <li class="item">Item-1</li>
+        <li id="second-item" class="item">Item-2</li>
+        <li class="item">Item-3</li>
+        <li class="item">Item-4</li>
+        <li class="item">Item-5</li>
+        <li class="item">Item-6</li>
+    </ul>
+    <script>
+        document.getElementById('second-item').addEventListener('click', function(event){
+            console.log('second item clicked');
+            event.stopPropagation();
+        })
+        //ul
+        document.getElementById('list-section').addEventListener('click', function(event1){
+            console.log('mainSection Clicked');
+           
+        })
+    </script>
+</body>
+</html>

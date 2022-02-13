@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h3 id="secret-info">Very Very Secret Informations </h3>
+        <input id="dlt-confirmation" type="text" placeholder="Please Type Delete">
+        <button id="dlt-btn" disabled>Delete</button>
+    </section>
+    <script>
+        document.getElementById('dlt-btn').addEventListener('click', function (){
+            document.getElementById('secret-info').style.display= 'none';
+        })
+        //Focus
+        document.getElementById('dlt-confirmation').addEventListener('focus', function (){
+            document.body.style.backgroundColor = 'lightcoral';
+        })
+        //Blur
+        document.getElementById('dlt-confirmation').addEventListener('blur', function (){
+            document.body.style.backgroundColor = 'white';
+        })
+       /*  //keydown
+        document.getElementById('dlt-confirmation').addEventListener('keydown', function (){
+           const deleteField=document.getElementById('dlt-confirmation');
+           console.log(deleteField.value);
+        }) */
+        /* //keyPress
+        document.getElementById('dlt-confirmation').addEventListener('keydown', function (){
+           const deleteField=document.getElementById('dlt-confirmation');
+           console.log(deleteField.value);
+        }) */
+        /* //keyUp
+        document.getElementById('dlt-confirmation').addEventListener('keyup', function (){
+           const deleteField=document.getElementById('dlt-confirmation');
+           console.log(deleteField.value);
+        }) */
+        //keyUp
+        document.getElementById('dlt-confirmation').addEventListener('keyup', function (event){
+            var eventValue = event.target.value.toLowerCase();
+           if(eventValue == 'delete'){
+            document.getElementById('dlt-btn').removeAttribute('disabled');
+
+           }
+           else{
+            document.getElementById('dlt-btn').setAttribute('disabled', true);
+           }
+        })
+        //Change Event
+        document.getElementById('dlt-confirmation').addEventListener('change', function (){
+           const deleteField=document.getElementById('dlt-confirmation');
+           console.log(deleteField.value);
+        })
+    </script>
+</body>
+</html>

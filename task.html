@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task </title>
+    <style>
+        .main{
+            margin: 0 auto;
+            width: 60%;
+            display: flex;
+            justify-content: space-between
+        }
+    </style>
+</head>
+<body>
+    <h3>Task That's Given on Module -25</h3>
+    <section>
+        <div id="main-section" class="main">
+            <h3 id="result-output"></h3>
+            <div>
+                <input type="text" id="input-1" class="input-field" placeholder="Please type  value-1">
+                <button class="check-btn" id="btn-1">Check-1</button>
+            </div>
+            <div>
+                <input type="text" id="input-2"
+             placeholder="Please type value -2">
+                <button id="btn-2">Check-2</button>
+            </div>
+            
+        </div>
+        <button id="equal-btn" >Equal to</button>
+    </section>
+
+    <script>
+        document.getElementById('btn-1').addEventListener('click', function(){
+            var inputValue= document.getElementById('input-1');
+            var firstValue = inputValue.value;
+        });
+
+        document.getElementById('btn-2').addEventListener('click', function(){
+            var secondInputValue= document.getElementById('input-2');
+            var secondValue = secondInputValue.value;
+        });
+        document.getElementById('equal-btn').addEventListener('click', function(){
+            
+            const firstInputValue = document.getElementById('input-1').value;
+            const secondInputValue = document.getElementById('input-2').value;
+            var totalValue= firstInputValue + secondInputValue;
+            document.getElementById('result-output').innerText=totalValue;
+            
+            
+        })
+    </script>
+</body>
+</html>
